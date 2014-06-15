@@ -43,6 +43,9 @@
 #include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/io/coded_stream.h>
 
+// disable 'warning C4267: 'argument' : conversion from 'size_t' to 'google::protobuf::uint32', possible loss of data'
+#pragma warning( push )
+#pragma warning( disable: 4267 )
 
 namespace google {
 namespace protobuf {
@@ -773,4 +776,8 @@ inline int WireFormatLite::LengthDelimitedSize(int length) {
 }  // namespace protobuf
 
 }  // namespace google
+
+// 4267
+#pragma warning( pop )
+
 #endif  // GOOGLE_PROTOBUF_WIRE_FORMAT_LITE_INL_H__

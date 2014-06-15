@@ -44,6 +44,10 @@
 #include <google/protobuf/stubs/common.h>
 // TODO(jasonh): some people seem to rely on protobufs to include this for them!
 
+// disable 'warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data'
+#pragma warning( push )
+#pragma warning( disable: 4267 )
+
 namespace google {
 namespace protobuf {
   namespace io {
@@ -308,4 +312,8 @@ inline int UnknownField::GetLengthDelimitedSize() const {
 }  // namespace protobuf
 
 }  // namespace google
+
+// 4267
+#pragma warning( pop )
+
 #endif  // GOOGLE_PROTOBUF_UNKNOWN_FIELD_SET_H__

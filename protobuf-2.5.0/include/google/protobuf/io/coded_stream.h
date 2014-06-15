@@ -129,6 +129,9 @@
 #endif
 #include <google/protobuf/stubs/common.h>
 
+// disable 'warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data'
+#pragma warning( push )
+#pragma warning( disable: 4244 )
 
 namespace google {
 namespace protobuf {
@@ -1133,4 +1136,8 @@ inline bool CodedInputStream::IsFlat() const {
 #endif  // _MSC_VER
 
 }  // namespace google
+
+// 4244
+#pragma warning( pop )
+
 #endif  // GOOGLE_PROTOBUF_IO_CODED_STREAM_H__

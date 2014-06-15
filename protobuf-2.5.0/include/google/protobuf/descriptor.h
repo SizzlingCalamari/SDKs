@@ -58,6 +58,10 @@
 #include <vector>
 #include <google/protobuf/stubs/common.h>
 
+// disable 'warning C4244: 'return' : conversion from '__int64' to 'int', possible loss of data'
+#pragma warning( push )
+#pragma warning( disable: 4244 )
+
 // TYPE_BOOL is defined in the MacOS's ConditionalMacros.h.
 #ifdef TYPE_BOOL
 #undef TYPE_BOOL
@@ -1518,4 +1522,8 @@ inline const FileDescriptor* FileDescriptor::weak_dependency(
 }  // namespace protobuf
 
 }  // namespace google
+
+// 4244
+#pragma warning( pop )
+
 #endif  // GOOGLE_PROTOBUF_DESCRIPTOR_H__
