@@ -11,12 +11,12 @@ includedirs (include_relative)
 configuration { "windows" }
     libdirs (os.getcwd() .. "/lib/win32/")
 
-configuration { "x32", "Debug" }
+configuration { "windows", "x32", "Debug" }
     links ("OALWrapper_x32_debug")
-configuration { "x32", "Release" }
+configuration { "windows", "x32", "Release" }
     links ("OALWrapper_x32_release")
-configuration { "x64", "Debug" }
+configuration { "windows", "x64", "Debug" }
     links ("OALWrapper_x64_debug")
-configuration { "x64", "Release" }
+configuration { "windows", "x64", "Release" }
     links ("OALWrapper_x64_release")
 configuration {}

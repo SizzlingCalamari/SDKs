@@ -12,12 +12,14 @@ local include_relative = path.getrelative(project_path, os.getcwd()) .. "/includ
 include_relative = iif(string.find(_ACTION, "vs20"), "$(ProjectDir)", "") .. include_relative
 
 includedirs (include_relative)
-links "libOpenAL32.dll.lib"
+
+configuration { "windows" }
+    libdirs (os.getcwd() .. "/lib/")
 
 configuration { "windows", "x32" }
-    libdirs (os.getcwd() .. "/lib/Win32/")
+    links "/Win32/libOpenAL32.dll.lib"
 configuration { "windows", "x64" }
-    libdirs (os.getcwd() .. "/lib/Win64/")
+    links "/Win64/libOpenAL32.dll.lib"
 
 local copy_path = ""
 configuration { "windows", "x32" }

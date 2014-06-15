@@ -16,9 +16,9 @@ includedirs (include_relative)
 configuration { "windows" }
     libdirs (os.getcwd() .. "/lib/win32/")
 
-configuration { "x32" }
+configuration { "windows", "x32" }
     links { "/x86/SDL2", "/x86/SDL2main", "/x86/SDL2test" }
-configuration { "x64" }
+configuration { "windows", "x64" }
     links { "/x64/SDL2", "/x64/SDL2main", "/x64/SDL2test" }
 
 local copy_path = ""

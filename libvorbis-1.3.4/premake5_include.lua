@@ -11,16 +11,16 @@ includedirs (include_relative)
 configuration { "windows" }
     libdirs (os.getcwd() .. "/lib/win32/")
 
-configuration { "x32", "Debug" }
+configuration { "windows", "x32", "Debug" }
     links ("/Win32/Debug/libvorbis_static")
     links ("/Win32/Debug/libvorbisfile")
-configuration { "x32", "Release" }
+configuration { "windows", "x32", "Release" }
     links ("/Win32/Release/libvorbis_static")
     links ("/Win32/Release/libvorbisfile")
-configuration { "x64", "Debug" }
+configuration { "windows", "x64", "Debug" }
     links ("/x64/Debug/libvorbis_static")
     links ("/x64/Debug/libvorbisfile")
-configuration { "x64", "Release" }
+configuration { "windows", "x64", "Release" }
     links ("/x64/Release/libvorbis_static")
     links ("/x64/Release/libvorbisfile")
 configuration {}

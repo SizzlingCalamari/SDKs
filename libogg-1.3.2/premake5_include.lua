@@ -11,12 +11,12 @@ includedirs (include_relative)
 configuration { "windows" }
     libdirs (os.getcwd() .. "/lib/win32/")
 
-configuration { "x32", "Debug" }
+configuration { "windows", "x32", "Debug" }
     links ("/Win32/Debug/libogg_static")
-configuration { "x32", "Release" }
+configuration { "windows", "x32", "Release" }
     links ("/Win32/Release/libogg_static")
-configuration { "x64", "Debug" }
+configuration { "windows", "x64", "Debug" }
     links ("/x64/Debug/libogg_static")
-configuration { "x64", "Release" }
+configuration { "windows", "x64", "Release" }
     links ("/x64/Release/libogg_static")
 configuration {}
